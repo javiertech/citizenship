@@ -32,16 +32,9 @@ function clcickAction() {
     let actionBtn = document.getElementById('action-btn');
     
     if(actionBtn.textContent === 'Reveal'){
-        let mainArea = document.getElementById('main-area');
-        mainArea.classList.toggle('first-state');
-        mainArea.classList.toggle('second-state');
-
         populateAnswers();
         actionBtn.textContent = 'Next';
     } else if(actionBtn.textContent === 'Next') {
-        let mainArea = document.getElementById('main-area');
-        mainArea.classList.toggle('second-state');
-        mainArea.classList.toggle('first-state');
 
         document.getElementById('list').innerHTML = '';
         actionBtn.textContent = 'Reveal';
